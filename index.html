@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Trình Chuyển Đổi Skin</title>
+    <link rel="icon" type="image/jpg" href="img/background.jpg">
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="stylesheet" href="style/minecraft-skinviewer.css"> <!-- Minecraft 3D CSS skin viewer - Robert Koszewski - https://github.com/rkkoszewski/minecraft-css-3d-skin-viewer -->
+  </head>
+  <body>
+    <div id="content">
+      <div id="container-left">
+        <div id="container-3d-viewers">
+          <button type="button" class="viewer-pause-btn steve"></button>
+          <div id="skin-viewer-3d-steve" class="steve skin-viewer-3d mc-skin-viewer-10x"></div>
+          <div class="separator-steve-alex separator-3d-viewers"></div>
+          <div id="skin-viewer-3d-alex" class="alex skin-viewer-3d mc-skin-viewer-10x slim"></div>
+          <button type="button" class="viewer-pause-btn alex"></button>
+          <span class="no3d hidden note">Đã tắt xem trước 3D</span>
+        </div>
+        <div id="container-3d-viewer-labels">
+          <span id="skin-viewer-3d-steve-label" class="steve">Steve</span>
+          <span id="skin-viewer-3d-alex-label" class="alex">Alex</span>
+        </div>
+        <hr />
+        <div id="container-bottom">
+          <form id="container-bottom-left" class="container-v" autocomplete="off">
+            <div>
+              <label for="fileElem">Chọn Skin Của bạn:</label>
+              <input type="file" id="fileElem" accept="image/png">
+            </div>
+            <div>
+              <label id="steveConvLabel">Steve chuyển thành Alex:</label>
+              <div>
+                <input type="button" id="s2aSButton" class="procBtn" value="Squeeze" disabled title="Get rid of half of the middle section">
+                <input type="button" id="s2aCButton" class="procBtn" value="Cut" disabled title="Get rid of the excess on the right">
+                <input type="button" id="s2aSHDButton" class="procBtn procBtnHD hidden" value="HD Squeeze" disabled title="Scale down the front, back, top & bottom sides of the arms">
+                <input type="button" id="s2aSFHDButton" class="procBtn procBtnHD hidden" value="HD Full Squeeze" disabled title="Scale down the entirety of the arms">
+              </div>
+            </div>
+            <div>
+              <label id="alexConvLabel">Alex chuyển thành Steve:</label>
+              <div>
+                <input type="button" id="a2sSButton" class="procBtn" value="Stretch" disabled title="Double the width of the middle section">
+                <input type="button" id="a2sFButton" class="procBtn" value="Fill" disabled title="Double the width of the section on the right">
+                <input type="button" id="a2sCButton" class="procBtn" value="Circular" disabled title="Copy the section on the left to the right side">
+                <input type="button" id="a2sSHDButton" class="procBtn procBtnHD hidden" value="HD Stretch" disabled title="Scale up the front, back, top & bottom sides of the arms">
+                <input type="button" id="a2sSFHDButton" class="procBtn procBtnHD hidden" value="HD Full Stretch" disabled title="Scale up the entirety of the arms">
+              </div>
+            </div>
+            <div>
+              <label id="HDMode" class="invisible">HD mode</label>
+              <div>
+                <input type="button" id="resetButton" class="ActionBtn" value="Reset" disabled>
+                <input type="button" id="saveButton" class="ActionBtn" value="Save" disabled>
+              </div>
+            </div>
+          </form>
+          <div id="container-bottom-right">
+            <form id="viewer-visibility" autocomplete="on">
+              <input type="checkbox" id="show3dSteve" checked>
+              <label for="show3dSteve">Show 3D Steve</label><br />
+              <input type="checkbox" id="show3dAlex" checked>
+              <label for="show3dAlex">Show 3D Alex</label><br />
+              <input type="checkbox" id="show2dViewer" checked>
+              <label for="show2dViewer">Show 2D Viewer</label><br />
+            </form>
+            <form id="extra-options" autocomplete="on">
+              <input type="checkbox" id="adjustCheckered" title="Resize checkerboard pattern, when using HD skins, according to pixel size">
+              <label for="adjustCheckered">Điều chỉnh nền 2D</label><br />
+            </form>
+            <span class="note">Để có hiệu suất tốt hơn, hãy tắt trình xem 3D!</span>
+          </div>
+        </div>
+      </div>
+      <div id="container-2d-viewer" class="skin">
+        <img id="skin-viewer-2d" class="pixelart checkered" alt="Skin" src="img/template.png">
+        <div id="container-2d-viewer-resize-corner"></div>
+      </div>
+      <span id="splash-text">Bây giờ với sự hỗ trợ HD!</span>
+    </div>
+    <footer>
+      MC Skin Converter by <a target="_blank" href="https://twitter.com/tolasinne">@tolasinne</a> |
+      GitHub: <a target="_blank" href="https://github.com/pz8gaming">here</a> |
+      Credits: <a target="_blank" href="https://pixabay.com/users/tommyvideo-3092371/">nghệ thuật trừu tượng</a>,
+      <a target="_blank" href="https://github.com/rkkoszewski/minecraft-css-3d-skin-viewer">Trình xem da 3D</a>,
+      <a target="_blank" href="https://www.fontspace.com/roboto-remix-font-f26577">MC font</a> |
+      Toàn bộ ứng dụng chạy trên máy tính của bạn, không có gì được tải lên.
+    </footer>
+    <!-- scripts -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
